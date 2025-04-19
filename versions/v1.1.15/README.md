@@ -172,5 +172,5 @@ Made with 💻 by **Mirza Ishan Beg**
 	4. [ ] Certain Auto-complete features to make data entry process much faster. 
 	5. [ ] Calendar like representation of the payments tables. (Makes decision making for the next entry much easier to handle.)
 	6. [ ] Rather than manual entries of dates, one would be prompted to select the date or could choose to type it down anyways.
-3. Added on top of that, it will be all done in PyQt6, a more recommended version as per the their documentation on PYPI.
+3. Added on top of that, it will be all done in PyQt6, a more recommended version as per their documentation on PYPI.
 ---

@@ -1,0 +1,25 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.db
+*.sqlite3
+.env
+.venv/
+env/
+venv/
+
+# Ignore build/dist directories (from PyInstaller or setup tools)
+build/
+dist/
+*.spec
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore refactoring/dev area (if outside the version folder)
+refactor/
+dev/

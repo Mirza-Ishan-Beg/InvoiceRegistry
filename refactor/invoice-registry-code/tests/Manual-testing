@@ -1,0 +1,64 @@
+import os
+from db.Modulated_Database_Constructor import Modulation
+
+class TableMaker(Modulation.CRUDOperations):
+    def __init__(self, db):
+        super().__init__(db)
+        Table1 = """
+                    CREATE TABLE IF NOT EXISTS invoices(
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        invoice_number TEXT,
+                        vendor_name TEXT,
+                        date TEXT,
+                        due_date TEXT,
+                        price INTEGER
+                    )
+                    """
+        Table2 = """
+                    CREATE TABLE IF NOT EXISTS credits_debits_notes(
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        invoice_id INTEGER,
+                        note_number TEXT,
+                        note_type TEXT,
+                        transaction_mode TEXT,
+                        price INTEGER,
+                        reason TEXT,
+                        FOREIGN KEY (invoice_id) REFERENCES invoices(id) ON DELETE CASCADE
+                    )
+                    """
+        Table3 = """
+                    CREATE TABLE IF NOT EXISTS outstanding_table(
+                        invoice_id INTEGER,
+                        invoice_number TEXT,
+                        initial_price INTEGER,
+                        total_credits INTEGER DEFAULT 0,
+                        total_debits INTEGER DEFAULT 0,
+                        due_date TEXT,
+                        payment INTEGER,
+                        outstanding INTERGER
+                    )
+                    """
+        # TODO: CONTINUE FROM HERE...
+        Table4 = """
+                    CREATE TABLE IF NOT EXISTS invoices(
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        invoice_number TEXT,
+                        vendor_name TEXT,
+                        date TEXT,
+                        due_date TEXT,
+                        price INTEGER
+                    )
+                    """
+        Table5 = """
+                    CREATE TABLE IF NOT EXISTS invoices(
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        invoice_number TEXT,
+                        vendor_name TEXT,
+                        date TEXT,
+                        due_date TEXT,
+                        price INTEGER
+                    )
+                    """
+
+    def make_tables(tables: list):
+        pass
